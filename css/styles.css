@@ -17,7 +17,7 @@
     --card-set-gap: 30px;
 
 }
-body{ width: 1200px;
+body{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -56,8 +56,7 @@ h1,h2,h3,p,ul{
 .container{
     width: 100%;
     align-items: center;
-    display: flex;
-    max-width: 1170px;
+    max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -67,6 +66,7 @@ h1,h2,h3,p,ul{
      /*nav*/
 
 .main-nav{
+    display: flex;
     width: 100%;
     border-bottom: 1px solid var(--border-color);
 }
@@ -111,13 +111,12 @@ h1,h2,h3,p,ul{
     /*main*/
 .herou{
     text-align: center;
+    padding-top:200px ;
+    padding-bottom:200px ;
     background-color: var(--secondary-fons-color);
 }
 .title{
-    padding-left: 252px;
-    padding-right: 252px;
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: var(--card-set-gap);
     font-weight: 900;
     font-size: 44px;
     line-height:1.36;
@@ -125,6 +124,11 @@ h1,h2,h3,p,ul{
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color:var(--white-text);
+}
+.hero-section-title{
+    width: 696px;
+    margin: 0 auto 100px;
+    margin-bottom: 30px;
 }
    /*Buttons*/
 .button{
@@ -169,7 +173,7 @@ h1,h2,h3,p,ul{
     justify-content: center; 
 }
 .list-flex{
-    display:flex;/**/
+    display:flex;
     padding-bottom: 32px;
 }
 .list-flex .list-bat+.list-bat{
@@ -179,26 +183,35 @@ h1,h2,h3,p,ul{
 
 
    /*Advantages*/
-.invisible-text
-{visibility: hidden;
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 .section{
     padding-top: 94px;
     padding-bottom: 94px;
 }
+.no-padding{
+    padding-top: 0;
+}
 .advantages{
     display: flex;
     flex-direction:row;
-    justify-content: space-between;
+    margin-left: -30px;
 } 
 
 .advantages >.item{
     flex-basis:  calc(100% / 4 - var(--card-set-gap));
+    margin-left: 30px;
 }
-.advantages >.item+.item{
-    margin-left: var(--card-set-gap);}
-
-    
     .section-title{    
         padding: 0;
         margin: 0;
@@ -218,11 +231,13 @@ h1,h2,h3,p,ul{
     /*picture*/   
 .picture{
     display: flex;
-    padding-bottom: 94px;
+    flex-direction: row;
+    margin-left: -30px;
     justify-content: space-between;
 }
 .picture>.picture-page{
      flex-basis:  calc(100% / 3 - var(--card-set-gap));
+     margin-left: 30px;
     }
 .picture>.picture-page+.picture-page{
     margin-left: var(--card-set-gap);
@@ -232,19 +247,16 @@ h1,h2,h3,p,ul{
 .team-lis{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left:-15px;
-    /*calc(-1*var(--card-set-gap));*/
-    
-    
+    margin-left:-30px;
 }
 .team-lis>.item{
+    background-color: var(--primery-fons-color);
+    margin-left: 30px;
     flex-basis : calc(100% / 4 - var(--card-set-gap));
     border-left: 1px solid var(--border-color) ;
     border-bottom: 1px solid var(--border-color) ;
     border-right: 1px solid var(--border-color) ; 
     }
-    /*margin-bottom: var(--card-set-gap);*/
     
 .team-lis>.item+.item{
     margin-left: var(--card-set-gap);
@@ -252,14 +264,13 @@ h1,h2,h3,p,ul{
 
 .card-content-team{
     text-align: center; 
+    padding-top: 30px;
+    padding-bottom: 30px; 
 }
 .item-text{
     margin-bottom: 10px;
 }
 
-/*.team-lis>.team{
-    flex-basis:  calc(100% / 4 - var(--card-set-gap));
-}*/
 .team-lis>.team+.team{
     margin-left: var(--card-set-gap);}
 .team{
@@ -276,7 +287,6 @@ h1,h2,h3,p,ul{
     color:var(--primery-text-color);
 }
 .text-list{
-    padding-top: 30px;
     font-weight: 500;
     font-size: 16px;
     line-height:1.18;
@@ -298,18 +308,20 @@ h1,h2,h3,p,ul{
 
 .card-set{
     display: flex;
-    flex-wrap: wrap;}
+    flex-wrap: wrap;
+    margin-left: -30px;
+}
 .card-set>.item{
     flex-basis:  calc(100% / 3 - 30px);
-    margin-left: 30px}
-.card-set>.item:nth-child(3n + 1){
-    margin-left: 0;}
+    margin-left: 30px
+}
 
 .card-set>.item:nth-child(-n + 6){
-margin-bottom: 30px;}
+margin-bottom: 30px;
+}
    
 .card-content{  
-    padding: 20px 24px;
+    padding: 20px;
     border-left: 1px solid var(--border-color) ;
     border-bottom: 1px solid var(--border-color) ;
     border-right: 1px solid var(--border-color) ;  
@@ -342,9 +354,10 @@ margin-bottom: 30px;}
        /*Footer*/
 .footer{
     background-color: var(--secondary-fons-color);
+    padding-bottom: 60px;
+    padding-top: 60px;
 }
 .logolip{
-    padding-top: 60px;
     margin-bottom: 20px;
 }
 .studio-doun{color:var(--white-text)
@@ -367,8 +380,4 @@ margin-bottom: 30px;}
 
 .footer-nav >.item:not(:last-child){
     margin-bottom: 9px;
-}
-
-.footer-nav{
-    padding-bottom: 60px;
 }

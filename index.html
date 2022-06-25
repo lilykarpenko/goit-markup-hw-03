@@ -14,8 +14,8 @@
 <body>
     <header class="page-header">
     <!--heder-nav-->
-    <nav class="container main-nav">
-                <div class="container">
+    <nav class="container ">
+                <div class="container main-nav">
                     <a class="logo" href="/">Web<span class="studio">Studio</span></a>
                     <ul class="sait-nav">
                         <li class="item"><a class="link" href="./index.html">Студия</a></li>
@@ -33,14 +33,14 @@
 <!--main-->
 <main>
     <section class="herou ">
-        <h1 class="title">Эффективные решения для вашего бизнеса</h1>
+        <h1 class="hero-section-title title">Эффективные решения для вашего бизнеса</h1>
         <button class="button order " type="button">Заказать услугу</button>
     </section>
     
     <!--Advantages-->
-    <div class="container">
-        <section class="section">
-            <h2 class="invisible-text">Приимущества</h2>
+    <section class="section">
+            <div class="container">
+            <h2 class="visually-hidden">Приимущества</h2>
             <ul class="advantages ">
                 <li class="item">
                     <h3 class="section-title">Внимание к деталям</h3>
@@ -59,25 +59,24 @@
                     <p class="title-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                 </li>
             </ul>
+        </div>
         </section>
-    </div>
     <!--picture-->
-    <div class="container ">
-        <section>
-            <h2 class="text">Чем мы занимаемся</h2>
-            <ul class="picture">
-                <li class="picture-page"><img src="./img/1.jpg" alt="набір контента на клавіатурі" width="370"></li>
-                <li class="picture-page"><img src="./img/2.jpg" alt="порівняння телефона и ноута" width="370"></li>
-                <li class="picture-page"><img src="./img/3.jpg" alt="робота на планшеті" width="370"></li>
-            </ul>    
-        </section>
-    </div>
+    <section class="section no-padding">
+        <div class="container ">
+            <h2 class="text centered">Чем мы занимаемся</h2>
+                <ul class="picture">
+                 <li class="picture-page"><img src="./img/1.jpg" alt="набір контента на клавіатурі" width="370"></li>
+                    <li class="picture-page"><img src="./img/2.jpg" alt="порівняння телефона и ноута" width="370"></li>
+                 <li class="picture-page"><img src="./img/3.jpg" alt="робота на планшеті" width="370"></li>
+             </ul>    
+        </div>
+    </section>
     
     <!--teams-->
-    <div class="container team ">
-        <section class=" section">
+    <section class=" section team">
+        <div class="container  ">
             <h2 class="text">Наша команда</h2>
-            <div class="container">
                 <ul class="team-lis">
                     <li class="item">
                         <div class="card-tumb">
@@ -95,7 +94,7 @@
                         </div>
                         <div class="card-content-team">
                             <h3 class="text-list item-text">Ольга Репина</h3>
-                            <p class="text-postitem-post">Frontend Developer</p>
+                            <p class="text-post item-post">Frontend Developer</p>
                         </div>
                     </li>
                     <li class="item">
@@ -104,7 +103,7 @@
                         </div>
                         <div class="card-content-team">
                             <h3 class="text-list item-text">Николай Тарасов</h3>
-                            <p class="text-postitem-post">Marketing</p>
+                            <p class="text-post item-post">Marketing</p>
                         </div>
                     </li>
                     <li class="item">
@@ -113,13 +112,13 @@
                         </div>
                         <div class="card-content-team">
                             <h3 class="text-list item-text">Михаил Ермаков</h3>
-                            <p class="text-postitem-post">UI Designer</p>
+                            <p class="text-post item-post">UI Designer</p>
                         </div>
                     </li>
                 </ul>
-            </div>
-        </section>
-    </div>
+        </div>
+        
+    </section>
 </main> 
 <!--footer--> 
 <footer  class="footer" >
